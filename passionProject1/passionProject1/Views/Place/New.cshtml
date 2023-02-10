@@ -1,0 +1,37 @@
+﻿@model IEnumerable<passionProject1.Models.placeDto>
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>create a place</h2>
+<form action="/place/create" method="POST">
+    <div>
+        <label>Name:</label> <input type="text" name="PlaceName" />
+    </div>
+    <div>
+        <label>ID:</label> <input type="text" name="PlaceID" />
+    </div>
+    <div>
+        <label>Category ID:</label> <input type="text" name="CategoryID" />
+    </div>
+    <div>
+        <label>Best Season To Go ID:</label> <input type="text" name="BestSeasonToGoID" />
+    </div>
+    <!--
+    <div>
+        <label>Best Season To Go:</label>
+        <select name="SpeciesID">
+            @foreach (var Best Season To Go in Model)
+            {
+                <option value="@species.SpeciesID">@species.SpeciesName</option>
+
+            }
+        </select>
+    </div>
+    -->
+    <div>
+        <input type="submit" value="Add Place" />
+
+    </div>
+</form>
+

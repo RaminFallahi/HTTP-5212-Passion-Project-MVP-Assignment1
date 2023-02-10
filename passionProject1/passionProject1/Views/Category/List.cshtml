@@ -1,0 +1,12 @@
+﻿@model IEnumerable<ZooApplication.Models.KeeperDto>
+@{
+    ViewBag.Title = "List";
+}
+
+<h2>Categories List</h2>
+<a href="/category/New">New category</a>
+@foreach (var category in Model)
+{
+    <h2><a href="/category/Details/@category.categoryID">@category.categoryName</a></h2>
+}
+
